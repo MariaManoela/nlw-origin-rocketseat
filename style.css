@@ -47,7 +47,6 @@ h1 {
 /* ==== LAYOUT ============================== */
 #header {
     border-bottom: 1px solid #E4E4E4;
-    margin-bottom: 2rem;
 }
 
 nav {
@@ -72,8 +71,40 @@ nav {
     margin-right: 1.5rem;
 }
 
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
 .section {
     padding: 5rem 0;
 }
 
 /* ==== HOME ============================== */
+#home .container {
+    margin: 0;
+}
+
+#home .image {
+    position: relative;
+}
+
+#home .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: red;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+#home .image img {
+    position: relative;
+    right: 2.93rem;
+}
+
+#home .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
