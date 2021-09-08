@@ -1,4 +1,4 @@
-// open and close menu when click on icons
+// Open and close menu when click on icons
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
@@ -8,7 +8,7 @@ for(const element of toggle) {
     })
 }
 
-// hide menu when click on menu links
+// Hide menu when click on menu links
 const links = document.querySelectorAll('nav ul li a')
 
 for(const link of links) {
@@ -17,7 +17,7 @@ for(const link of links) {
     })
 }
 
-// add shadow to header when scrolling the page
+// Add shadow to header when scrolling the page
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
@@ -28,3 +28,13 @@ window.addEventListener('scroll', function() {
         header.classList.remove('scroll')
     }
 })
+
+// Testimonials carousel slider swiper
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1, 
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    mousewheel: true,
+    keyboard: true
+  });
