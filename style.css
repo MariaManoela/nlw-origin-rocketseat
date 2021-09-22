@@ -527,7 +527,8 @@ footer .social a:hover {
         padding: 10rem 0;
     }
 
-    .section header {
+    .section header,
+    #testimonials header {
         max-width: 32rem;
         text-align: center;
         margin-left: auto;
@@ -588,7 +589,20 @@ footer .social a:hover {
     }
 
     /* services */
-    
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    /* testimonials */
+    #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+    }
 }
 /* large devices: 1023 > */
 /* large devices: 992 > */
