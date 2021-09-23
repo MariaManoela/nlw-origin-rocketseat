@@ -3,7 +3,7 @@ const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
 for(const element of toggle) {
-    element.addEventListener('click', function() {
+    element.addEventListener('click', function(){
         nav.classList.toggle('show')
     })
 }
@@ -12,7 +12,7 @@ for(const element of toggle) {
 const links = document.querySelectorAll('nav ul li a')
 
 for(const link of links) {
-    link.addEventListener('click', function() {
+    link.addEventListener('click', function(){
         nav.classList.remove('show')
     })
 }
@@ -22,7 +22,6 @@ const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
 function changeHeaderWhenScroll(){
-
     if(window.scrollY >= navHeight) {
         header.classList.add('scroll')
     } else {
@@ -44,7 +43,7 @@ const swiper = new Swiper('.swiper-container', {
             setWrapperSize: true
         }
     }
-  });
+  })
 
 //   ScrollReveal: show elements when scrolling the page
 const scrollReveal = ScrollReveal({
@@ -68,10 +67,9 @@ scrollReveal.reveal(
 const backToTopButton = document.querySelector('.back-to-top')
 
 function backToTop(){
-
     if(window.scrollY >= 560){
         backToTopButton.classList.add('show')
-    }else{
+    } else {
         backToTopButton.classList.remove('show')
     }
 }
@@ -94,7 +92,7 @@ function activateMenuAtCurrentSection(){
             document
                 .querySelector('nav ul li a[href*=' + sectionId + ']')
                 .classList.add('active')
-        }else{
+        } else {
             document
                 .querySelector('nav ul li a[href*=' + sectionId + ']')
                 .classList.remove('active')
@@ -103,7 +101,7 @@ function activateMenuAtCurrentSection(){
 }
 
 // When scroll
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function(){
     changeHeaderWhenScroll()
     backToTop()
     activateMenuAtCurrentSection()

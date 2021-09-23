@@ -46,7 +46,7 @@ html {
 }
 
 body {
-    font: 400 1rem "DM Sans", sans-serif;
+    font: 400 1rem var(--body-font);
     color: var(--text-color);
     background: var(--body-color);
     -webkit-font-smoothing: antialiased;
@@ -67,11 +67,11 @@ body {
     padding: 0 2rem;
     border-radius: .25rem;
     font: 500 1rem var(--body-font);
+    transition: background .3s;
 }
 
 .button:hover {
     background: var(--base-color-alt);
-    transition: background .3s;
 }
 
 .divider-1 {
@@ -292,7 +292,6 @@ nav.show div.icon-close {
 
 #home .text p {
     margin-bottom: 2rem;
-    max-width: 100%;
 }
 
 /* ==== ABOUT ============================== */
@@ -363,15 +362,15 @@ nav.show div.icon-close {
     background: white;
 }
 
+#testimonials .container {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 #testimonials header {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     margin-bottom: 0;
-}
-
-#testimonials .container {
-    margin-left: 0;
-    margin-right: 0;
 }
 
 #testimonials blockquote {
@@ -521,7 +520,6 @@ footer .social a:hover {
         max-width: 1120px;
         margin-left: auto;
         margin-right: auto;
-        /* gap: 6rem; */
     }
     
     .section {
